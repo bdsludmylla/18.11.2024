@@ -1,25 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Página</title>
+    <title>Minha Página - Mês de Namoro</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             text-align: center;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
+            background: url('https://example.com/sua-imagem-de-fundo.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
         }
-        img {
-            width: 100%;
-            height: auto;
-            margin: 10px;
-            border-radius: 8px;
+
+        h1 {
+            font-size: 2.5em;
+            color: #fff;
+            margin-top: 30px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
+
+        p {
+            font-size: 1.3em;
+            color: #fff;
+            margin: 10px 0;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
         .contador {
-            font-size: 1.5em;
-            margin-top: 20px;
+            font-size: 1.8em;
+            margin-top: 30px;
+            font-weight: bold;
         }
+
         /* Estilo do carrossel */
         .carrossel {
             position: relative;
@@ -32,38 +47,55 @@
             max-width: 100%;
             margin: 0 auto;
         }
+
         .carrossel img {
             flex-shrink: 0;
             scroll-snap-align: center;
-            width: 80%;  /* Ajuste para o tamanho da imagem */
-            max-width: 300px;  /* Limite máximo de largura para telas pequenas */
+            width: 80%;  
+            max-width: 350px;
+            border-radius: 12px;
+            transition: transform 0.3s ease-in-out;
         }
+
+        .carrossel img:hover {
+            transform: scale(1.05);
+        }
+
         /* Estilo dos pontos */
         .pontos {
             display: flex;
             justify-content: center;
-            margin-top: 10px;
+            margin-top: 20px;
         }
+
         .pontos span {
-            height: 10px;
-            width: 10px;
-            margin: 0 5px;
+            height: 12px;
+            width: 12px;
+            margin: 0 6px;
             border-radius: 50%;
             background-color: #bbb;
             cursor: pointer;
         }
+
         .pontos .ativo {
-            background-color: #717171;
+            background-color: #ff6f61;
         }
 
         /* Ajuste para dispositivos móveis */
         @media (max-width: 768px) {
             .carrossel img {
-                width: 100%;  /* Imagens com largura total para telas menores */
-                max-width: 100%;  /* Ajusta a imagem para ocupar toda a largura */
+                width: 100%;  
+                max-width: 100%;  
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1.2em;
             }
         }
-
     </style>
 </head>
 <body>
@@ -75,8 +107,7 @@
         <img src="WhatsApp Image 2024-11-17 at 22.49.34.jpeg" alt="Imagem 1">
         <img src="WhatsApp Image 2024-11-17 at 23.41.18 (2).jpeg" alt="Imagem 2">
         <img src="WhatsApp Image 2024-11-17 at 23.41.18.jpeg" alt="Imagem 3">
-        <img src="WhatsApp Image 2024-11-17 at 23.41.18 (1).jpeg" alt="Imagem 3">
-
+        <img src="WhatsApp Image 2024-11-17 at 23.41.18 (1).jpeg" alt="Imagem 4">
     </div>
 
     <!-- Pontos de navegação -->
