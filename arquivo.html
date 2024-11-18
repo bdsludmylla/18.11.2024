@@ -189,11 +189,20 @@
     
     <h1>Você é o amor da minha vida.</h1>
 
-    <div class="spotify-player" style="text-align: center; margin-top: 20px;">
-        <iframe src="https://open.spotify.com/track/1oke7Jkp9afNQzTUD5iHZZ?si=HFhmPKhpTGeRYPA7ARAmtA" allowtransparency="true" allow="encrypted-media"></iframe>
-    </div>
+    <p><a href="#" onclick="mostrarPlayer()">Clique para ouvir no Spotify</a></p>
 
-    
+<div id="spotify-player" style="display: none; text-align: center; margin-top: 20px;">
+    <iframe src="https://open.spotify.com/track/1oke7Jkp9afNQzTUD5iHZZ?si=HFhmPKhpTGeRYPA7ARAmtA" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+</div>
+
+<script>
+    function mostrarPlayer() {
+        var player = document.getElementById('spotify-player');
+        player.style.display = 'block'; // Torna o player visível
+    }
+</script>
+
+
     <p>De todos os prazeres da vida, amar você é o melhor e o mais gostoso. Me encontro em voce
         todos os dias, sinto que já te conhecia há muito antes dessa vida. Você me ilumina,
         me ensina e me inspira. <br><br>
