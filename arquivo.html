@@ -13,18 +13,35 @@
         img {
             max-width: 100%;
             height: auto;
+            margin: 10px;
+            border-radius: 8px;
         }
         .contador {
             font-size: 1.5em;
             margin-top: 20px;
         }
+        .carrossel {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding-bottom: 20px;
+            scroll-snap-type: x mandatory;
+        }
+        .carrossel img {
+            flex-shrink: 0;
+            scroll-snap-align: center;
+            max-width: 80%;
+        }
     </style>
 </head>
 <body>
-    <h1>Bem-vindo(a)!</h1>
-    <p>Esta é uma mensagem especial com uma imagem.</p>
-    <img src="WhatsApp Image 2024-11-17 at 22.49.34.jpeg" alt="Imagem">
-    <p>Espero que goste!</p>
+    <h1>Lud e Grazi</h1>
+    <p>Minha vida se fez mais feliz desde que te conheci</p>
+    <div class="carrossel">
+        <img src="WhatsApp Image 2024-11-17 at 22.49.34.jpeg" alt="Imagem 1">
+        <img src="WhatsApp Image 2024-11-17 at 22.49.37.jpeg" alt="Imagem 2">
+    </div>
+    <p>Esse contador serve para nunca esquecer há quanto tempo me apaixonei por você.</p>
     <div class="contador" id="contador"></div>
 
     <script>
@@ -42,7 +59,7 @@
             const dias = diferenca.getUTCDate() - 1;
 
             // Exibir a informação
-            document.getElementById('contador').innerText = `Juntas há ${anos} anos, ${meses} meses e ${dias} dias.`;
+            document.getElementById('contador').innerText = `Juntas há ${anos} anos: ${meses} meses: ${dias} dias.`;
         }
 
         // Atualizar o contador a cada segundo
