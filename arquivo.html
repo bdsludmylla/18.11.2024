@@ -14,12 +14,42 @@
             max-width: 100%;
             height: auto;
         }
+        .contador {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <h1>Bem-vindo(a)!</h1>
     <p>Esta é uma mensagem especial com uma imagem.</p>
-    <img src="WhatsApp Image 2024-11-17 at 22.49.34.jpeg">
+    <img src="WhatsApp Image 2024-11-17 at 22.49.34.jpeg" alt="Imagem">
     <p>Espero que goste!</p>
+    <div class="contador" id="contador"></div>
+
+    <script>
+        // Defina a data de início
+        const dataInicio = new Date('2023-10-22'); // Substitua pela data desejada
+
+        // Função para calcular a diferença de tempo
+        function calcularTempo() {
+            const dataAtual = new Date();
+            const diferenca = new Date(dataAtual - dataInicio);
+
+            // Calcular meses e dias
+            const anos = diferenca.getUTCFullYear() - 1970;
+            const meses = diferenca.getUTCMonth();
+            const dias = diferenca.getUTCDate() - 1;
+
+            // Exibir a informação
+            document.getElementById('contador').innerText = `Juntas há ${anos} anos, ${meses} meses e ${dias} dias.`;
+        }
+
+        // Atualizar o contador a cada segundo
+        setInterval(calcularTempo, 1000);
+
+        // Calcular o tempo ao carregar a página
+        calcularTempo();
+    </script>
 </body>
 </html>
